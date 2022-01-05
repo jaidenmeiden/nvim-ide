@@ -40,6 +40,7 @@ Plug 'https://github.com/vim-airline/vim-airline' " Status bar
 Plug 'https://github.com/lifepillar/pgsql.vim' " PSQL Pluging needs :SQLSetType pgsql.vim
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
+Plug 'ghifarit53/tokyonight-vim'
 " Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion - This pluging needs node
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
@@ -59,7 +60,8 @@ nmap <F8> :TagbarToggle<CR>
 
 set completeopt-=preview " For No Previews
 
-colorscheme jellybeans
+" colorscheme jellybeans
+colorscheme tokyonight
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
