@@ -1,36 +1,31 @@
-syntax on " Syntax activation
+syntax on
 
-set number " Show number line
+set number
 set relativenumber
 set autoindent
 set tabstop=4
 set shiftwidth=4
 set smarttab
 set softtabstop=4
-set mouse=a " Include mouse interaction
-" New configuration options
-set noerrorbells " Ignore error noise
-set sw=2 " Reduce tabulations width
-set expandtab " Set spaces like tabulations
-set smartindent " Set smart indent
-set rnu " Set specific row number
-set numberwidth=1 " Reduce index columns width
-set nowrap " No wrap
-set noswapfile " No swap file
+set mouse=a
+set noerrorbells
+set sw=2
+set expandtab
+set smartindent
+set rnu
+set numberwidth=1
+set nowrap
+set noswapfile
 set nobackup
-set incsearch " Include search
-set ignorecase " Search words ignoring case
-set clipboard=unnamedplus " Copy information into clipboard
-set encoding=utf-8 " International characters
+set incsearch
+set ignorecase
+set clipboard=unnamedplus
+set encoding=utf-8
 set cursorline
-set termguicolors " Change color theme
-set colorcolumn=120 " Acivate limit column
-" Change limit column color
+set termguicolors
+set colorcolumn=120
 highlight ColoColumn ctermbg=0 guibg=lightgrey
 
-" Plugins manager - github.com/junegunn/vim-plug
-
-" Default root to save plugins: ~/.local/share/nvim/plugged
 call plug#begin()
  
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw
