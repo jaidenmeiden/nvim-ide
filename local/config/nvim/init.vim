@@ -7,35 +7,43 @@ set tabstop=4
 set shiftwidth=4
 set smarttab
 set softtabstop=4
+
 set mouse=a
 set noerrorbells
 set sw=2
 set expandtab
 set smartindent
-set rnu
 set numberwidth=1
+set rnu
 set nowrap
 set noswapfile
 set nobackup
 set incsearch
-set ignorecase
 set clipboard=unnamedplus
 set encoding=utf-8
+set ignorecase
 set cursorline
+
 set termguicolors
+
 set colorcolumn=120
 highlight ColoColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin()
- 
-Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw
+
+" Themes
+Plug 'ghifarit53/tokyonight-vim' " Tokyo night theme    
+
+" Visual
+
+"
+Plug 'https://github.com/tpope/vim-surround' " Surrounding ysw
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
 Plug 'https://github.com/lifepillar/pgsql.vim' " PSQL Pluging needs :SQLSetType pgsql.vim
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
-Plug 'ghifarit53/tokyonight-vim'
 " Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion - This pluging needs node
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
@@ -46,6 +54,8 @@ set encoding=UTF-8
 
 call plug#end()
 
+let mapleader = " "  
+
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
@@ -53,6 +63,7 @@ nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 
 nmap <F8> :TagbarToggle<CR>
 
+" Theme
 set completeopt-=preview " For No Previews
 
 " colorscheme jellybeans

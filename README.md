@@ -35,6 +35,13 @@ Neovim is a Vim-based text editor engineered for extensibility and usability, to
 
 [Plugin manager](https://github.com/junegunn/vim-plug)
 
+
+``` bash # Unix, Linux
+
+
+
+```
+
 Default root to save plugins: `~/.local/share/nvim/plugged`
 
 #### Instructions
@@ -62,22 +69,25 @@ set tabstop=4
 set shiftwidth=4
 set smarttab
 set softtabstop=4
+
 set mouse=a # Include mouse interaction
 set noerrorbells # Ignore error noise
 set sw=2 # Reduce tabulations width
 set expandtab # Set spaces like tabulations
 set smartindent # Set smart indent
-set rnu # Set specific row number
 set numberwidth=1 # Reduce index columns width
+set rnu # Set specific row number
 set nowrap # No wrap
 set noswapfile # No swap file
 set nobackup
 set incsearch # Include search
-set ignorecase # Search words ignoring case
 set clipboard=unnamedplus # Copy information into clipboard
 set encoding=utf-8 # International characters
+set ignorecase # Search words ignoring case
 set cursorline
+
 set termguicolors # Change color theme
+
 set colorcolumn=120 # Acivate limit column
 set completeopt-=preview # For No Previews
 
@@ -113,17 +123,53 @@ call plug#end()
 [Plugin list](https://vimawesome.com/)
 
 ```bash
+# Themes
+Plug 'rghifarit53/tokyonight-vim' # Tokyo night theme
+Plug 'morhetz/gruvbox' 
+Plug 'ayu-theme/ayu-vim' 
+Plug 'joshdick/onedark.vim'
+Plug 'abra/vim-obsidian'
 
-Plug 'tpope/vim-surround' # Surrounding ysw
-Plug 'preservim/nerdtree' # NerdTree
-Plug 'tpope/vim-commentary' # For Commenting gcc & gc
+# Visual
+Plug 'yggdroot/identline'
 Plug 'vim-airline/vim-airline' # Status bar
+Plug 'vim-airline/vim-airline-themes' # 
+Plug 'ryanoasis/vim-devicons' # Developer Icons
+Plug 'lilydjwg/colorizer'
+Plug 'leafgarland/typescript-vim'
+
+# Git integration
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-surround' # Surrounding ysw
+Plug 'tpope/vim-commentary' # For Commenting gcc & gc
+Plug 'junegunn/gv.vim'
+
+# Functionality
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'KabbAmine/vCoolor.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'rust-lang/rust.vim'
+Plug 'cespare/vim-toml'
+Plug 'vim-python/python-syntax'
+
+# Code completion
+Plug 'ddollar/nerdcommenter'
+Plug 'honza/vim-snippets'
+Plug 'sirver/ultisnips'
+Plug 'jiangmiao/auto-pairs'
+Plug 'mattn/emmet-vim'
+Plug 'neoclide/coc.vim', {'branch': 'release'} # Auto Completion - This pluging needs node
+
+# Pending clasification
+Plug 'preservim/nerdtree' # NerdTree
 Plug 'lifepillar/pgsql.vim' # PSQL Pluging needs :SQLSetType pgsql.vim
 Plug 'ap/vim-css-color' # CSS Color Preview
 Plug 'rafi/awesome-vim-colorschemes' # Retro Scheme
-Plug 'rghifarit53/tokyonight-vim' # Tokyo night theme
-Plug 'neoclide/coc.nvim' # Auto Completion - This pluging needs node
-Plug 'ryanoasis/vim-devicons' # Developer Icons
 Plug 'tc50cal/vim-terminal' # Vim Terminal
 Plug 'preservim/tagbar' # Tagbar for code navigation
 Plug 'terryma/vim-multiple-cursors' # CTRL + N for multiple cursors
