@@ -79,7 +79,7 @@ set encoding=utf-8 # International characters
 set cursorline
 set termguicolors # Change color theme
 set colorcolumn=120 # Acivate limit column
-set completeopt-=preview " For No Previews
+set completeopt-=preview # For No Previews
 
 highlight ColoColumn ctermbg=0 guibg=lightgrey # Change limit column color
 
@@ -91,9 +91,16 @@ highlight ColoColumn ctermbg=0 guibg=lightgrey # Change limit column color
 
 call plug#begin()
 # Optional, you can change default root
-call plug#begin(~/.local/share/nvim/plugged)
+call plug#begin('~/.local/share/nvim/plugged')
 
+#####################################
 # Plugins list
+Plug 'http://github.com/zzzzzzz/zzzzzzz'
+
+Or
+
+Plug 'zzzzzz/zzzzzzz'
+#####################################
 
 set encoding=UTF-8
 
@@ -103,20 +110,26 @@ call plug#end()
 
 ### Pligins list
 
+[Plugin list](https://vimawesome.com/)
+
 ```bash
 
-Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw
-Plug 'https://github.com/preservim/nerdtree' " NerdTree
-Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
-Plug 'https://github.com/vim-airline/vim-airline' " Status bar
-Plug 'https://github.com/lifepillar/pgsql.vim' " PSQL Pluging needs :SQLSetType pgsql.vim
-Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
-Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
-Plug 'https://github.com/rghifarit53/tokyonight-vim' " Tokyo night theme
-Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion - This pluging needs node
-Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
-Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
-Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
-Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
+Plug 'tpope/vim-surround' # Surrounding ysw
+Plug 'preservim/nerdtree' # NerdTree
+Plug 'tpope/vim-commentary' # For Commenting gcc & gc
+Plug 'vim-airline/vim-airline' # Status bar
+Plug 'lifepillar/pgsql.vim' # PSQL Pluging needs :SQLSetType pgsql.vim
+Plug 'ap/vim-css-color' # CSS Color Preview
+Plug 'rafi/awesome-vim-colorschemes' # Retro Scheme
+Plug 'rghifarit53/tokyonight-vim' # Tokyo night theme
+Plug 'neoclide/coc.nvim' # Auto Completion - This pluging needs node
+Plug 'ryanoasis/vim-devicons' # Developer Icons
+Plug 'tc50cal/vim-terminal' # Vim Terminal
+Plug 'preservim/tagbar' # Tagbar for code navigation
+Plug 'terryma/vim-multiple-cursors' # CTRL + N for multiple cursors
 
 ```
+
+### Themes
+
+[Themes database](https://vimcolorschemes.com/)
