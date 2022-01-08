@@ -157,13 +157,13 @@ Plug 'rust-lang/rust.vim' # This is a Vim plugin that provides Rust file detecti
 Plug 'cespare/vim-toml' # Vim syntax for TOML. TOML aims to be a minimal configuration file format that's easy to read due to obvious semantics.
 Plug 'vim-python/python-syntax' 3 Python syntax highlighting for Vim
 
-# Code completion
+# Code modification
 Plug 'ddollar/nerdcommenter' # vim global plugin that provides easy code commenting
 Plug 'honza/vim-snippets' # This repository contains snippets files for various programming languages.This repository contains snippets files for various programming languages.
 Plug 'sirver/ultisnips' # UltiSnips is the ultimate solution for snippets in Vim. It has many features, speed being one of them.
 Plug 'jiangmiao/auto-pairs' # Insert or delete brackets, parens, quotes in pair.
 Plug 'mattn/emmet-vim' # emmet-vim is a vim plug-in which provides support for expanding abbreviations similar to emmet.
-Plug 'neoclide/coc.vim', {'branch': 'release'} # Auto Completion - This pluging needs node
+Plug 'neoclide/coc.nvim', {'branch': 'release'} # Auto Completion - This pluging needs node
 
 # Pending clasification
 Plug 'lifepillar/pgsql.vim' # PSQL Pluging needs :SQLSetType pgsql.vim
