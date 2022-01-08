@@ -125,48 +125,47 @@ call plug#end()
 ```bash
 # Themes
 Plug 'rghifarit53/tokyonight-vim' # Tokyo night theme
-Plug 'morhetz/gruvbox' 
-Plug 'ayu-theme/ayu-vim' 
-Plug 'joshdick/onedark.vim'
-Plug 'abra/vim-obsidian'
+Plug 'morhetz/gruvbox' # gruvbox is heavily inspired by badwolf, jellybeans and solarized.
+Plug 'ayu-theme/ayu-vim' # Theme works only if VIM supports
+Plug 'joshdick/onedark.vim' # A dark Vim/Neovim color scheme for the GUI and 16/256/true-color terminals
+Plug 'abra/vim-obsidian' # Obsidian is a colorscheme for Vim
 
 # Visual
-Plug 'yggdroot/identline'
-Plug 'vim-airline/vim-airline' # Status bar
-Plug 'vim-airline/vim-airline-themes' # 
-Plug 'ryanoasis/vim-devicons' # Developer Icons
-Plug 'lilydjwg/colorizer'
-Plug 'leafgarland/typescript-vim'
+Plug 'yggdroot/identline' # Put line to indicate identation
+Plug 'vim-airline/vim-airline' # SLean & mean status/tabline for vim that's light as air. Status bar
+Plug 'vim-airline/vim-airline-themes' # This is the official theme repository for vim-airline
+Plug 'ryanoasis/vim-devicons' # Database developer Icons
+Plug 'lilydjwg/colorizer' # A Vim plugin to colorize all text in the form #rgb, #rgba, #rrggbb, #rrgbbaa, rgb(...), rgba(...)
+Plug 'leafgarland/typescript-vim' # Activate typescript syntax
 
 # Git integration
-Plug 'mhinz/vim-signify'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
-Plug 'tpope/vim-surround' # Surrounding ysw
-Plug 'tpope/vim-commentary' # For Commenting gcc & gc
-Plug 'junegunn/gv.vim'
+Plug 'mhinz/vim-signify' # Signify (or just Sy) uses the sign column to indicate added, modified and removed lines in a file
+Plug 'tpope/vim-fugitive' # Fugitive is the premier Vim plugin for Git.
+Plug 'tpope/vim-rhubarb' # If fugitive.vim is the Git, rhubarb.vim is the Hub.
+Plug 'tpope/vim-surround' # Surround.vim is all about surroundings: parentheses, brackets, quotes, XML tags, and more.
+Plug 'tpope/vim-commentary' # For Commenting gcc & gc & gcap
+Plug 'junegunn/gv.vim' # A git commit browser
 
 # Functionality
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'KabbAmine/vCoolor.vim'
-Plug 'easymotion/vim-easymotion'
-Plug 'rust-lang/rust.vim'
-Plug 'cespare/vim-toml'
-Plug 'vim-python/python-syntax'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } # Thumbnail file browser. fzf is a general-purpose command-line fuzzy finder.
+Plug 'junegunn/fzf.vim' # Include fzf into neovim
+Plug 'preservim/nerdtree' # The NERDTree is a file system explorer for the Vim editor
+Plug 'christoomey/vim-tmux-navigator' # This plugin provides the mappings which allow you to move between Vim panes and tmux splits seamlessly.
+Plug 'KabbAmine/vCoolor.vim' # Simple color selector/picker for Vim
+Plug 'easymotion/vim-easymotion' # EasyMotion provides a much simpler way to use some motions in vim. 
+Plug 'rust-lang/rust.vim' # This is a Vim plugin that provides Rust file detection, syntax highlighting, formatting, Syntastic integration, and more.
+Plug 'cespare/vim-toml' # Vim syntax for TOML. TOML aims to be a minimal configuration file format that's easy to read due to obvious semantics.
+Plug 'vim-python/python-syntax' 3 Python syntax highlighting for Vim
 
 # Code completion
-Plug 'ddollar/nerdcommenter'
-Plug 'honza/vim-snippets'
-Plug 'sirver/ultisnips'
-Plug 'jiangmiao/auto-pairs'
-Plug 'mattn/emmet-vim'
+Plug 'ddollar/nerdcommenter' # vim global plugin that provides easy code commenting
+Plug 'honza/vim-snippets' # This repository contains snippets files for various programming languages.This repository contains snippets files for various programming languages.
+Plug 'sirver/ultisnips' # UltiSnips is the ultimate solution for snippets in Vim. It has many features, speed being one of them.
+Plug 'jiangmiao/auto-pairs' # Insert or delete brackets, parens, quotes in pair.
+Plug 'mattn/emmet-vim' # emmet-vim is a vim plug-in which provides support for expanding abbreviations similar to emmet.
 Plug 'neoclide/coc.vim', {'branch': 'release'} # Auto Completion - This pluging needs node
 
 # Pending clasification
-Plug 'preservim/nerdtree' # NerdTree
 Plug 'lifepillar/pgsql.vim' # PSQL Pluging needs :SQLSetType pgsql.vim
 Plug 'ap/vim-css-color' # CSS Color Preview
 Plug 'rafi/awesome-vim-colorschemes' # Retro Scheme
