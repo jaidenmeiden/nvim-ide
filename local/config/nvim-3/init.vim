@@ -1,6 +1,6 @@
 " vim:foldmethod=marker:foldlevel=0
 
-" vim-plug {{{
+" vim-plug {{
 call plug#begin()
 
 " color scheme
@@ -48,29 +48,29 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 call plug#end()
-" }}} vim-plug
+" }} vim-plug
 
-" Colors {{{
+" Colors {{
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 syntax enable                " enable syntax processing
 colorscheme base16-default
 set background=dark
-" }}} Colors
+" }} Colors
 
-" Spaces & Tabs {{{
+" Spaces & Tabs {{
 set tabstop=4       " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
 set shiftwidth=4    " number of spaces to use for autoindent
 set expandtab       " tabs are space
 set autoindent
 set copyindent      " copy indent from the previous line
-" }}} Spaces & Tabs
+" }} Spaces & Tabs
 
-" Clipboard {{{
+" Clipboard {{
 set clipboard+=unnamedplus
-" }}} Clipboard
+" }} Clipboard
 
-" UI Config {{{
+" UI Config {{
 set hidden
 set number                   " show line number
 set showcmd                  " show command in bottom bar
@@ -81,9 +81,9 @@ set laststatus=2             " window will always have a status line
 set nobackup
 set noswapfile
 let &colorcolumn="80,".join(range(119,999),",")
-" }}} UI Config
+" }} UI Config
 
-" Search {{{
+" Search {{
 set incsearch       " search as characters are entered
 set hlsearch        " highlight matche
 set ignorecase      " ignore case when searching
@@ -96,16 +96,16 @@ if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ --column
     set grepformat=%f:%l:%c%m
 endif
-" }}} Search
+" }} Search
 
-" Folding {{{
+" Folding {{
 set foldenable
 set foldlevelstart=10  " default folding level when buffer is opened
 set foldnestmax=10     " maximum nested fold
 set foldmethod=syntax  " fold based on indentation
-" }}} Folding
+" }} Folding
 
-" Leader & Mappings {{{
+" Leader & Mappings {{
 let mapleader=","   " leader is comma
 
 " edit/reload vimrc
@@ -154,32 +154,32 @@ map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 " fzf
 nnoremap <c-p> :FZF<CR>
 
-" NERDTree mappings {{{
+" NERDTree mappings {{
 map <C-n> :NERDTreeToggle<CR>
-" }}}
+" }}
 
-" YCM mappings {{{
+" YCM mappings {{
 nnoremap <leader>g :YcmCompleter GoTo<CR>
-" }}}
+" }}
 
-" }}}
+" }}
 
-" NERDTree {{{
+" NERDTree {{
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
-" }}}
+" }}
 
-" Cpp Enhanced Highlighting {{{
+" Cpp Enhanced Highlighting {{
 let g:cpp_class_scope_highlight = 1
-" }}}
+" }}
 
-" Airline {{{
+" Airline {{
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-" }}}
+" }}
 
-" YCM {{{
+" YCM {{
 "let g:ycm_server_keep_logfiles = 1
 "let g:ycm_server_log_level = 'debug'
 let g:ycm_filetype_specific_completion_to_disable = {
@@ -192,26 +192,26 @@ let g:ycm_complete_in_strings = 1
 let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
 let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's
 
-" }}}
+" }}
 
-" UltiSnips {{{
+" UltiSnips {{
 let g:UltiSnipsExpandTrigger       = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger  = "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
 let g:UltiSnipsListSnippets        = "<c-k>" "List possible snippets based on current file
 let g:UltiSnipsUsePythonVersion = 2
-" }}}
+" }}
 
-" Flake8 {{{
+" Flake8 {{
 let g:flake8_show_in_gutter=1
 let g:flake8_show_in_file=1
-" }}}
+" }}
 
-" Functions {{{
+" Functions {{
 " trailing whitespace
 match ErrorMsg '\s\+$'
 function! TrimWhiteSpace()
     %s/\s\+$//e
 endfunction
 autocmd BufWritePre * :call TrimWhiteSpace()
-" }}}
+" }}

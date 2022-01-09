@@ -89,7 +89,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " Auto Completion - This pluging
 
 call plug#end()
 
-let mapleader = " " " Leader key on ily 
+" Leader key on ily
+let mapleader = " " 
 
 " Theme
 let g:python_highloght_all = 1
@@ -158,12 +159,8 @@ let g:ctrlp_use_caching = 0
 let g:NERDTreeChDirMode = 2 " Change actual directory to actual node father
 map <F2> :NERDTreeToggle<CR>
 
-let g:NERDTreeDirArrowExpandable = '→'
-let g:NERDTreeDirArrowCollapsible = '↓'
-"let g:NERDTreeDirArrowExpandable = '>'
-"let g:NERDTreeDirArrowCollapsible = 'v'
-"let g:NERDTreeDirArrowExpandable = '▶'
-"let g:NERDTreeDirArrowCollapsible = '▼'
+let g:NERDTreeDirArrowExpandable = '▶'
+let g:NERDTreeDirArrowCollapsible = '▼'
 
 function! s:check_back_space() abort
   let col == col('.') -1
@@ -203,7 +200,7 @@ highlight SignifySignAdd                  ctermbg=green                guibg=#00
 highlight SignifySignDelete ctermfg=black ctermbg=red    guifg=#ffffff guibg=#ff0000
 highlight SignifySignChange ctermfg=black ctermbg=yellow guifg=#000000 guibg=#ffff00
 
-" Se utiliza para salir de las busquedas
+" Quit searching
 nnoremap / /a<DEL>
 
 " Trigger configuration. Do not used <tab> if you use https://gitgub.com/Valloric/YouCompleteMe
