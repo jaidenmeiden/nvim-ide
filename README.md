@@ -97,7 +97,7 @@ set autoindent                                   # Uses the indent from the prev
 set copyindent                                   # Copy the structure of the existing lines indent when 
                                                  # autoindenting a new line.
 set smartindent                                  # Is like 'autoindent' but also recognizes some syntax to
-		                                         # increase/reduce the indent where appropriate.
+                                                 # increase/reduce the indent where appropriate.
 
 # }}} Spaces & Tabs
 
