@@ -36,10 +36,13 @@ Neovim is a Vim-based text editor engineered for extensibility and usability, to
 [Plugin manager](https://github.com/junegunn/vim-plug)
 
 
-``` bash # Unix, Linux
+#### Neovim
 
+###### Unix, Linux
 
-
+```sh
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 
 Default root to save plugins: `~/.local/share/nvim/plugged`
@@ -80,7 +83,7 @@ set wildmenu                                     # Visual autocomplete for comma
 set showmatch                                    # Highlight matching brace
 set laststatus=2                                 # Window will always have a status line
 set nobackup
-set noswapfile                                   # Disable creating swap files entirely 
+set noswapfile                                   # Disable creating swap files entirely
 set colorcolumn=120                              # Activate limit column
 highlight ColoColumn ctermbg=0 guibg=lightgrey   # Change limit column color
 set completeopt-=preview                         # For No Previews
@@ -94,7 +97,7 @@ set shiftwidth=4                                 # Number of spaces to use for a
 set expandtab                                    # Set spaces like tabulations (Tabs are space)
 set smarttab                                     # Set smart tab
 set autoindent                                   # Uses the indent from the previous line
-set copyindent                                   # Copy the structure of the existing lines indent when 
+set copyindent                                   # Copy the structure of the existing lines indent when
                                                  # autoindenting a new line.
 set smartindent                                  # Is like 'autoindent' but also recognizes some syntax to
                                                  # increase/reduce the indent where appropriate.
@@ -144,7 +147,70 @@ set encoding=utf-8                               # International characters
 
 ```
 
-#### Notes
+#### Tools required
+
+##### GIT
+
+The Git is included in Linux standard repositories can be installed easily using the apt command. However, if tool isn't avalaible, you can excecute:
+
+```bash
+
+$ sudo apt update
+$ sudo apt upgrade
+$ sudo apt install git
+$ git --version
+
+# Global configuration
+$ git config --global user.name <"Your name">
+$ git config --global user.email <Your email>
+
+# Local configuration
+$ git config user.name <"Your name">
+$ git config user.email <Your email>
+
+# Check and verify changes
+$ git config --list
+
+```
+
+#### Exuberant ctags (Optional, if you install `preservim/tagbar`)
+
+[Exuberant ctags](http://ctags.sourceforge.net/)
+
+If you need to install plugin `preservim/tagbar`. 
+
+```bash
+
+$ sudo apt install exuberant-ctags
+
+```
+
+Tagbar is a Vim plugin that provides an easy way to browse the tags of the current file and get an overview of its structure. It does this by creating a sidebar that displays the ctags-generated tags of the current file, ordered by their scope. This means that for example methods in C++ are displayed under the class they are defined in.
+
+
+#### Conquer of Completion [COC](https://github.com/neoclide/coc.nvim)
+
+True snippet and additional text editing support
+
+##### Python configuration to COC
+
+```bash
+
+$ sudo apt-get install node
+$ sudo apt-get install nodejs
+$ sudo apt-get install npm
+$ sudo apt-get install python3-pip
+$ sudo npm install -g yarn
+$ pip3 install jedi
+
+$ cd ~/.local/share/nvim/plugged/coc.nvim/ && yarn install && yarn build
+
+$ cd ~/.config/nvm && nvm init.vim
+
+:CocInstall coc-python
+
+```
+#### Notes and additionals
 
 * *How does `smarttab` actually works?*
 
@@ -162,7 +228,7 @@ The quickest way to solve this problem is to [download and install](https://gith
 [Nerd fonts downloads](https://www.nerdfonts.com/font-downloads)
 [Nerd Fonts Repository](https://github.com/ryanoasis/nerd-fonts)
 
-Nerd Fonts is a project that patches developer targeted fonts with a high number of glyphs (icons).  wSpecifically to add a high number of extra glyphs from popular 'iconic fonts' such as [Font Awesome](https://github.com/FortAwesome/Font-Awesome), [Devicons](https://vorillaz.github.io/devicons/#/main), [Octicons](https://github.com/primer/octicons), and [others](https://github.com/ryanoasis/nerd-fonts#glyph-sets).
+Nerd Fonts is a project that patches developer targeted fonts with a high number of glyphs (icons). Specifically to add a high number of extra glyphs from popular 'iconic fonts' such as [Font Awesome](https://github.com/FortAwesome/Font-Awesome), [Devicons](https://vorillaz.github.io/devicons/#/main), [Octicons](https://github.com/primer/octicons), and [others](https://github.com/ryanoasis/nerd-fonts#glyph-sets).
 
 
 ### Plugin initialization
@@ -206,7 +272,10 @@ Plug 'vim-airline/vim-airline' # SLean & mean status/tabline for vim that's ligh
 Plug 'vim-airline/vim-airline-themes' # This is the official theme repository for vim-airline
 Plug 'ryanoasis/vim-devicons' # Database developer Icons
 Plug 'lilydjwg/colorizer' # A Vim plugin to colorize all text in the form #rgb, #rgba, #rrggbb, #rrgbbaa, rgb(...), rgba(...)
-Plug 'leafgarland/typescript-vim' # Activate typescript syntax
+Plug 'leafgarland/typescript-vim' # Activate typescript synt/ax
+
+# Navigation
+Plug 'preservim/tagbar' # Tagbar for code navigation
 
 # Git integration
 Plug 'mhinz/vim-signify' # Signify (or just Sy) uses the sign column to indicate added, modified and removed lines in a file
@@ -222,7 +291,7 @@ Plug 'junegunn/fzf.vim' # Include fzf into neovim
 Plug 'preservim/nerdtree' # The NERDTree is a file system explorer for the Vim editor
 Plug 'christoomey/vim-tmux-navigator' # This plugin provides the mappings which allow you to move between Vim panes and tmux splits seamlessly.
 Plug 'KabbAmine/vCoolor.vim' # Simple color selector/picker for Vim
-Plug 'easymotion/vim-easymotion' # EasyMotion provides a much simpler way to use some motions in vim. 
+Plug 'easymotion/vim-easymotion' # EasyMotion provides a much simpler way to use some motions in vim.
 Plug 'rust-lang/rust.vim' # This is a Vim plugin that provides Rust file detection, syntax highlighting, formatting, Syntastic integration, and more.
 Plug 'cespare/vim-toml' # Vim syntax for TOML. TOML aims to be a minimal configuration file format that's easy to read due to obvious semantics.
 Plug 'vim-python/python-syntax' 3 Python syntax highlighting for Vim
@@ -235,12 +304,13 @@ Plug 'jiangmiao/auto-pairs' # Insert or delete brackets, parens, quotes in pair.
 Plug 'mattn/emmet-vim' # emmet-vim is a vim plug-in which provides support for expanding abbreviations similar to emmet.
 Plug 'neoclide/coc.nvim', {'branch': 'release'} # Auto Completion - This pluging needs node
 
-# Pending clasification
+# Database
 Plug 'lifepillar/pgsql.vim' # PSQL Pluging needs :SQLSetType pgsql.vim
+
+# Pending clasification
 Plug 'ap/vim-css-color' # CSS Color Preview
 Plug 'rafi/awesome-vim-colorschemes' # Retro Scheme
 Plug 'tc50cal/vim-terminal' # Vim Terminal
-Plug 'preservim/tagbar' # Tagbar for code navigation
 Plug 'terryma/vim-multiple-cursors' # CTRL + N for multiple cursors
 
 ```
