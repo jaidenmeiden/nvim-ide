@@ -1,24 +1,46 @@
 syntax on
 
+" Mouse {{{
 set mouse=a
-set noerrorbells
+" }}} Mouse
+
+" UI config {{{
+set number
+set cursorline
+set showmatch
+set nobackup
+set noswapfile
+set colorcolumn=120
+highlight ColoColumn ctermbg=0 guibg=lightgrey
+
+" }}} UI config
+
+" Spaces & Tabs {{{
 set sw=2
 set expandtab
 set smartindent
 set numberwidth=1
-set number
+" }}} Spaces & Tabs
+
+" Write behaviour {{{
 set rnu
 set nowrap
-set noswapfile
-set nobackup
-set incsearch
-set clipboard=unnamedplus
-set encoding=utf-8
-set ignorecase
-set cursorline
+" }}} Write behaviour
 
-set colorcolumn=120
-highlight ColoColumn ctermbg=0 guibg=lightgrey
+" Search behaviour {{{
+set incsearch
+set ignorecase
+" }}} Search behaviour
+
+" Clipboard {{{
+set clipboard+=unnamedplus
+" }}} Clipboard
+
+" Errors {{{
+set noerrorbells
+" }}} Errors
+
+set encoding=utf-8
 
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -179,6 +201,7 @@ highlight SignifySignAdd                  ctermbg=green                guibg=#00
 highlight SignifySignDelete ctermfg=black ctermbg=red    guifg=#ffffff guibg=#ff0000
 highlight SignifySignChange ctermfg=black ctermbg=yellow guifg=#000000 guibg=#ffff00
 
+" Se utiliza para salir de las busquedas
 nnoremap / /a<DEL>
 
 " Trigger configuration. Do not used <tab> if you use https://gitgub.com/Valloric/YouCompleteMe
