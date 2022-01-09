@@ -7,6 +7,8 @@ set mouse=a
 " UI config {{{
 set number
 set cursorline
+set splitbelow
+set splitright
 set showmatch
 set nobackup
 set noswapfile
@@ -118,8 +120,8 @@ nnoremap <silent> <up> :resize +5<CR>
 nnoremap <silent> <down> :resize -5<CR>
 
 " Open terminal panel
-vnoremap <c-t> :split<CR>:ter<CR>
-nnoremap <c-t> :split<CR>:ter<CR>
+vnoremap <c-t> :split<CR>:ter<CR>:resize 15<CR>
+nnoremap <c-t> :split<CR>:ter<CR>:resize 15<CR>
 
 " Move to next buffer with <leader> + k
 nnoremap <leader>k :bnext<CR>
@@ -128,7 +130,7 @@ nnoremap <leader>k :bnext<CR>
 nnoremap <leader>j :bprevious<CR>
 
 " Close actual buffer with <leader> + q
-nnoremap <leader>q :delete<CR>
+nnoremap <leader>q :bdelete<CR>
 
 " Create a new window with <leader> + t
 nnoremap <leader>t :tabe<CR>
