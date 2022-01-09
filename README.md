@@ -9,7 +9,7 @@
 Neovim is a Vim-based text editor engineered for extensibility and usability, to encourage new applications and contributions.
 
 
-### Basic commands (Newvim)
+## Basic commands (Newvim)
 
 * Enter **normal** mode: `Esc` or `Ctrl + c`
 * To move: `h` &#8592; `j` &#8595; `k` &#8593; `l` &#8594;
@@ -31,7 +31,7 @@ Neovim is a Vim-based text editor engineered for extensibility and usability, to
 * Paste from clipboard: `p` **Paste to next line** `P` **Paste to previuos line**
 
 
-### Plugin manager
+## Plugin manager
 
 [Plugin manager](https://github.com/junegunn/vim-plug)
 
@@ -57,7 +57,7 @@ Default root to save plugins: `~/.local/share/nvim/plugged`
 
 ```
 
-### Configuration options
+## Configuration options
 
 ```bash
 
@@ -147,9 +147,9 @@ set encoding=utf-8                               # International characters
 
 ```
 
-#### Tools required
+## Tools required
 
-##### GIT
+### GIT
 
 The Git is included in Linux standard repositories can be installed easily using the apt command. However, if tool isn't avalaible, you can excecute:
 
@@ -173,7 +173,7 @@ $ git config --list
 
 ```
 
-#### Exuberant ctags (Optional, if you install `preservim/tagbar`)
+### Exuberant ctags (Optional)
 
 [Exuberant ctags](http://ctags.sourceforge.net/)
 
@@ -188,11 +188,11 @@ $ sudo apt install exuberant-ctags
 Tagbar is a Vim plugin that provides an easy way to browse the tags of the current file and get an overview of its structure. It does this by creating a sidebar that displays the ctags-generated tags of the current file, ordered by their scope. This means that for example methods in C++ are displayed under the class they are defined in.
 
 
-#### Conquer of Completion [COC](https://github.com/neoclide/coc.nvim)
+### Conquer of Completion [COC](https://github.com/neoclide/coc.nvim)
 
 True snippet and additional text editing support
 
-##### Python configuration to COC
+#### Python configuration to COC
 
 ```bash
 
@@ -210,7 +210,7 @@ $ cd ~/.config/nvm && nvm init.vim
 :CocInstall coc-python
 
 ```
-#### Notes and additionals
+## Notes and additionals
 
 * *How does `smarttab` actually works?*
 
@@ -231,7 +231,7 @@ The quickest way to solve this problem is to [download and install](https://gith
 Nerd Fonts is a project that patches developer targeted fonts with a high number of glyphs (icons). Specifically to add a high number of extra glyphs from popular 'iconic fonts' such as [Font Awesome](https://github.com/FortAwesome/Font-Awesome), [Devicons](https://vorillaz.github.io/devicons/#/main), [Octicons](https://github.com/primer/octicons), and [others](https://github.com/ryanoasis/nerd-fonts#glyph-sets).
 
 
-### Plugin initialization
+## Plugin initialization
 
 ```bash
 
@@ -254,7 +254,7 @@ call plug#end()
 
 ```
 
-### Pligins list
+## Plugins list
 
 [Plugin list](https://vimawesome.com/)
 
@@ -315,6 +315,6 @@ Plug 'terryma/vim-multiple-cursors' # CTRL + N for multiple cursors
 
 ```
 
-### Themes
+## Themes
 
 [Themes database](https://vimcolorschemes.com/)
