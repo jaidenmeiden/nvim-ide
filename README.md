@@ -74,6 +74,8 @@ set relativenumber
 set numberwidth=1                                # Reduce index columns width
 set showcmd                                      # Show command in bottom bar
 set cursorline                                   # Highlight current line
+set splitbelow                                   # Make the new window appear below the current window.
+set splitright                                   # Make the new window appear on the right.
 set wildmenu                                     # Visual autocomplete for command menu
 set showmatch                                    # Highlight matching brace
 set laststatus=2                                 # Window will always have a status line
@@ -144,11 +146,24 @@ set encoding=utf-8                               # International characters
 
 #### Notes
 
-*How does `smarttab` actually works?*
+* *How does `smarttab` actually works?*
 
 As it is written in help, when `smarttab` is off, `softtabstop` is used everywhere including line start. However, if `softtabstop` is equal to `-1` then it is set to `shiftwidth` anyway. Hence there'll be no difference in setting `smarttab` on or off.
 
 In other words, `smarttab` is only meaningful if both set `expandtab` and `softtabstop` differs from `shiftwidth`. But normally it's not the case and we don't need `smarttab`.
+
+* Icons are not showing up into status bar (Plugin [vim-arline](https://github.com/vim-airline/vim-airline))
+
+The quickest way to solve this problem is to [download and install](https://github.com/ryanoasis/nerd-fonts#option-1-download-and-install-manually) Nerd fonts manually. You can see [detailed installation](https://github.com/ryanoasis/vim-devicons/wiki/Installation).
+
+### Nerd Fonts
+
+[Nerd Fonts](https://www.nerdfonts.com/#home)
+[Nerd fonts downloads](https://www.nerdfonts.com/font-downloads)
+[Nerd Fonts Repository](https://github.com/ryanoasis/nerd-fonts)
+
+Nerd Fonts is a project that patches developer targeted fonts with a high number of glyphs (icons).  wSpecifically to add a high number of extra glyphs from popular 'iconic fonts' such as [Font Awesome](https://github.com/FortAwesome/Font-Awesome), [Devicons](https://vorillaz.github.io/devicons/#/main), [Octicons](https://github.com/primer/octicons), and [others](https://github.com/ryanoasis/nerd-fonts#glyph-sets).
+
 
 ### Plugin initialization
 
