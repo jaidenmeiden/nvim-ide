@@ -87,7 +87,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " Auto Completion - This pluging
 
 call plug#end()
 
-let mapleader = "," " Leader key on ily 
+let mapleader = " " " Leader key on ily 
 
 " Theme
 let g:python_highloght_all = 1
