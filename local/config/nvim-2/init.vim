@@ -51,7 +51,7 @@ Plug 'joshdick/onedark.vim' " A dark Vim/Neovim color scheme for the GUI and 16/
 Plug 'abra/vim-obsidian' " Obsidian is a colorscheme for Vim
 
 " Visual
-Plug 'yggdroot/identline' " Put line to indicate identation
+Plug 'Yggdroot/indentLine' " This plugin is used for displaying thin vertical lines at each indentation level for code indented with spaces
 Plug 'vim-airline/vim-airline' " SLean & mean status/tabline for vim that's light as air. Status bar
 Plug 'vim-airline/vim-airline-themes' " This is the official theme repository for vim-airline
 Plug 'ryanoasis/vim-devicons' " Database developer Icons
@@ -91,8 +91,8 @@ let mapleader = "," " Leader key on ily
 
 " Theme
 let g:python_highloght_all = 1
-set termguicollors
-set nackground=dark
+set termguicolors
+set background=dark
 let ayucolor="dark"
 let g:gruvbox_contrast_dark="hard"
 colorscheme gruvbox
