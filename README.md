@@ -65,7 +65,6 @@ syntax enable                                    # Enable syntax processing
 
 # Mouse {{{
 set mouse=a                                      # Include mouse interaction
-
 # }}} Mouse
 
 # UI Config {{{
@@ -83,7 +82,6 @@ set noswapfile                                   # Disable creating swap files e
 set colorcolumn=120                              # Activate limit column
 highlight ColoColumn ctermbg=0 guibg=lightgrey   # Change limit column color
 set completeopt-=preview                         # For No Previews
-
 # }}} UI Config
 
 # Spaces & Tabs {{{
@@ -98,18 +96,15 @@ set copyindent                                   # Copy the structure of the exi
                                                  # autoindenting a new line.
 set smartindent                                  # Is like 'autoindent' but also recognizes some syntax to
                                                  # increase/reduce the indent where appropriate.
-
 # }}} Spaces & Tabs
 
 # Clipboard {{{
 set clipboard+=unnamedplus                       # Copy information into clipboard
-
 # }}} Clipboard
 
 # Write behaviour {{{
 set rnu                                          # Set specific row number
 set nowrap                                       # No wrap
-
 # }}} Write behaviour
 
 # Search behaviour {{{
@@ -125,7 +120,6 @@ if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ --column
     set grepformat=%f:%l:%c%m
 endif
-
 # }}} Search behaviour
 
 # Folding {{{
@@ -133,18 +127,15 @@ set foldenable
 set foldlevelstart=10                            # Default folding level when buffer is opened
 set foldnestmax=10                               # Maximum nested fold
 set foldmethod=syntax                            # Fold based on indentation
-
 # }}} Folding
 
 # Errors {{{
 set noerrorbells                                 # Ignore error noise
-
 # }}} Errors
 
 # Colors {{{
 set background=dark
 set termguicolors                                # Change color theme
-
 # }}} Colors
 
 set encoding=utf-8                               # International characters

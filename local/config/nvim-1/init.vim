@@ -1,11 +1,37 @@
+" Mouse {{{
+:set mouse=a
+" }}} Mouse
+
+" UI config {{{
 :set number
+:set cursorline
 :set relativenumber
+" }}} UI config
+
+" Spaces & Tabs {{{
 :set autoindent
 :set tabstop=4
 :set shiftwidth=4
 :set smarttab
 :set softtabstop=4
-:set mouse=a
+" }}} Spaces & Tabs
+
+" Write behaviour {{{
+:set rnu
+:set nowrap
+" }}} Write behaviour
+
+" Search behaviour {{{
+:set incsearch
+:set ignorecase
+" }}} Search behaviour
+
+" Clipboard {{{
+:set clipboard+=unnamedplus
+" }}} Clipboard
+
+:set encoding=utf-8
+
 
 call plug#begin()
 
