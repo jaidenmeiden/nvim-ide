@@ -60,38 +60,92 @@ Default root to save plugins: `~/.local/share/nvim/plugged`
 
 # Instructions
 
-syntax on # Syntax activation
+syntax on                                        # Syntax activation
+syntax enable                                    # Enable syntax processing
 
-set number # Show number line
+# Mouse {{{
+set mouse=a                                      # Include mouse interaction
+
+# }}} Mouse
+
+# UI Config {{{
+set hidden
+set number                                       # show line number
 set relativenumber
-set autoindent
-set tabstop=4
-set shiftwidth=4
-set smarttab
-set softtabstop=4
-
-set mouse=a # Include mouse interaction
-set noerrorbells # Ignore error noise
-set sw=2 # Reduce tabulations width
-set expandtab # Set spaces like tabulations
-set smartindent # Set smart indent
-set numberwidth=1 # Reduce index columns width
-set rnu # Set specific row number
-set nowrap # No wrap
-set noswapfile # No swap file
+set numberwidth=1                                # Reduce index columns width
+set showcmd                                      # show command in bottom bar
+set cursorline                                   # highlight current line
+set wildmenu                                     # visual autocomplete for command menu
+set showmatch                                    # highlight matching brace
+set laststatus=2                                 # window will always have a status line
 set nobackup
-set incsearch # Include search
-set clipboard=unnamedplus # Copy information into clipboard
-set encoding=utf-8 # International characters
-set ignorecase # Search words ignoring case
-set cursorline
+set noswapfile                                   # Disable creating swap files entirely 
+set colorcolumn=120                              # Activate limit column
+highlight ColoColumn ctermbg=0 guibg=lightgrey   # Change limit column color
+set completeopt-=preview                         # For No Previews
 
-set termguicolors # Change color theme
+# }}} UI Config
 
-set colorcolumn=120 # Acivate limit column
-set completeopt-=preview # For No Previews
+# Spaces & Tabs {{{
+set sw=2                                         # Reduce tabulations width
+set tabstop=4                                    # number of visual spaces per TAB
+set softtabstop=4                                # number of spaces in tab when editing
+set shiftwidth=4                                 # number of spaces to use for autoindent
+set expandtab                                    # Set spaces like tabulations (Tabs are space)
+set autoindent
+set copyindent                                   # copy indent from the previous line
+set smarttab                                     # Set smart tab
+set smartindent                                  # Set smart indent
 
-highlight ColoColumn ctermbg=0 guibg=lightgrey # Change limit column color
+# }}} Spaces & Tabs
+
+# Clipboard {{{
+set clipboard+=unnamedplus                       # Copy information into clipboard
+
+# }}} Clipboard
+
+# Write behaviour {{{
+set rnu                                          # Set specific row number
+set nowrap                                       # No wrap
+
+# }}} Write behaviour
+
+# Search behaviour {{{
+set incsearch                                    # search as characters are entered (Include search)
+set hlsearch                                     # highlight matche
+set ignorecase                                   # ignore case when searching
+set smartcase                                    # ignore case if search pattern is lower case
+                                                 # case-sensitive otherwise
+
+# set Ag as the grep command
+if executable('ag')
+    # Note we extract the column as well as the file and line number
+    set grepprg=ag\ --nogroup\ --nocolor\ --column
+    set grepformat=%f:%l:%c%m
+endif
+
+# }}} Search behaviour
+
+# Folding {{{
+set foldenable
+set foldlevelstart=10                            # default folding level when buffer is opened
+set foldnestmax=10                               # maximum nested fold
+set foldmethod=syntax                            # fold based on indentation
+
+# }}} Folding
+
+# Errors {{{
+set noerrorbells                                 # Ignore error noise
+
+# }}} Errors
+
+# Colors {{{
+set background=dark
+set termguicolors                                # Change color theme
+
+# }}} Colors
+
+set encoding=utf-8                               # International characters
 
 ```
 
